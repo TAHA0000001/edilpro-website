@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdilPro - Ristrutturazioni e Servizi Chiavi in Mano</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome per le icone -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 56px;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        .hero {
+            background: url('images/edilpro_logo.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 50px;
+            border-radius: 10px;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">EdilPro</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#chi-siamo">Chi Siamo</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servizi">Servizi</a></li>
+                <li class="nav-item"><a class="nav-link" href="#preventivo">Richiedi un Preventivo</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero d-flex align-items-center">
+    <div class="hero-overlay container">
+        <h1 class="display-4">Benvenuti su EdilPro</h1>
+        <p class="lead">Ristrutturazioni e Servizi Chiavi in Mano a Gazzada Schianno</p>
+        <a href="#preventivo" class="btn btn-primary mt-3">Richiedi un Preventivo</a>
+    </div>
+</section>
+
+<!-- Chi Siamo -->
+<section id="chi-siamo" class="section">
+    <div class="container">
+        <h2 class="mb-4">Chi Siamo</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>EdilPro è un'azienda fondata da Omar Douhabi, specializzata in ristrutturazioni e servizi "chiavi in mano". Offriamo soluzioni complete per elettricità, idraulica, muratura e molto altro.</p>
+                <ul>
+                    <li>Professionalità e competenza</li>
+                    <li>Soluzioni personalizzate per ogni esigenza</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img src="azienda.jpg" alt="EdilPro Team" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Servizi -->
+<section id="servizi" class="section bg-light">
+    <div class="container">
+        <h2 class="mb-4">I Nostri Servizi</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Elettricità</h5>
+                        <p class="card-text">Installazione e manutenzione di impianti elettrici per abitazioni e aziende.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Idraulica</h5>
+                        <p class="card-text">Servizi idraulici completi, dalla riparazione alle nuove installazioni.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Muratura</h5>
+                        <p class="card-text">Opere murarie e ristrutturazioni complete per trasformare la tua casa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Richiedi un Preventivo -->
+<section id="preventivo" class="section">
+    <div class="container">
+        <h2 class="mb-4">Richiedi un Preventivo</h2>
+        <form action="https://formspree.io/f/yourformid" method="POST">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="_replyto" required>
+            </div>
+            <div class="mb-3">
+                <label for="servizio" class="form-label">Servizio Richiesto:</label>
+                <select class="form-select" id="servizio" name="servizio">
+                    <option value="elettricita">Elettricità</option>
+                    <option value="idraulica">Idraulica</option>
+                    <option value="muratura">Muratura</option>
+                    <option value="ristrutturazione">Ristrutturazione</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="messaggio" class="form-label">Descrizione:</label>
+                <textarea class="form-control" id="messaggio" name="messaggio" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Invia</button>
+        </form>
+    </div>
+</section>
+
+<!-- Contatti -->
+<section id="contatti" class="section bg-light">
+    <div class="container">
+        <h2 class="mb-4">Contattaci</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <form action="https://formspree.io/f/yourformid" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nome:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="_replyto" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Messaggio:</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Invia</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h5>Seguici sui social</h5>
+                <a href="https://facebook.com/tuopagina" class="btn btn-primary me-2 mb-2" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <a href="https://wa.me/393920806027" class="btn btn-success me-2 mb-2" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-center">
+    <div class="container">
+        <p>&copy; 2024 EdilPro. Tutti i diritti riservati.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS e dipendenze (Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Font Awesome JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+</html>
